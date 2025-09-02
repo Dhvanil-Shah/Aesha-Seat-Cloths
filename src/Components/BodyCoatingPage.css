@@ -1,0 +1,117 @@
+/* === STYLES FOR BODY COATING PAGE - DUBAI MALL UI === */
+
+.bodycoating-wrapper {
+  background: radial-gradient(80% 60% at 50% 0%, rgba(167,139,250,0.10) 0%, rgba(17,24,39,0) 60%),
+    linear-gradient(180deg, #0f172a 0%, #111827 100%);
+  color: #f3f4f6;
+}
+
+.bodycoating-wrapper .page-title-luxury {
+  color: #e5e7eb;
+}
+
+.bodycoating-wrapper .page-subtitle-luxury {
+  color: #9ca3af;
+}
+
+.bodycoating-wrapper .back-button {
+  border-color: #8b5cf6;
+  color: #e5e7eb;
+}
+
+.bodycoating-wrapper .back-button:hover {
+  background-color: #8b5cf6;
+  color: #0b1020;
+}
+
+.coatings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; /* More space for a luxury feel */
+}
+
+.coating-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .coating-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  /* Alternate the layout for visual interest */
+  .coating-section:nth-child(even) .coating-image-container {
+    order: 2;
+  }
+}
+
+.coating-image-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(167,139,250,0.2), 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.coating-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coating-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #a78bfa 0%, #d8b4fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #e5e7eb; /* fallback */
+  margin-bottom: 1rem;
+}
+
+.coating-description {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.coating-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #cbd5e1;
+}
+
+.coating-content {
+  padding: 1.5rem 1.75rem;
+  border-radius: 0.75rem;
+  background:
+    linear-gradient(180deg, rgba(167,139,250,0.12) 0%, rgba(12,18,32,0.6) 100%);
+  border: 1px solid rgba(167,139,250,0.18);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.coating-button {
+  background-color: #8b5cf6;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.35);
+}
+
+.coating-button:hover {
+  background-color: #7c3aed;
+  transform: translateY(-2px);
+}

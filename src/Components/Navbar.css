@@ -1,0 +1,182 @@
+/* === STYLES FOR NAVBAR AND SIDENAV === */
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid #374151;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* We get the container styles from App.css, but we can add them here if needed */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #f3f4f6;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navbar-brand .brand-auto {
+  color: #a78bfa; /* Purple */
+}
+
+.navbar-nav-desktop {
+  display: none;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav-desktop {
+    display: flex;
+  }
+}
+
+.nav-link {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 1.125rem;
+  transition: color 0.3s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #a78bfa;
+}
+
+.navbar-button {
+  display: none;
+  background-color: #8b5cf6;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar-button:hover {
+    background-color: #7c3aed;
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .navbar-button {
+        display: inline-block;
+    }
+}
+
+/* Hamburger Menu Icon */
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-icon .bar {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: flex;
+  }
+}
+
+/* Side Navigation Panel */
+.sidenav {
+  height: 100%;
+  width: 280px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: -280px;
+  background-color: #1f2937;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+}
+
+.sidenav.open {
+  right: 0;
+}
+
+.sidenav-link {
+  padding: 10px 15px 10px 32px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #d1d5db;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav-link:hover {
+  color: #a78bfa;
+}
+
+.sidenav-button {
+    display: block;
+    background-color: #8b5cf6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 30px 32px;
+    text-align: center;
+}
+
+.sidenav .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: #d1d5db;
+  cursor: pointer;
+}
+
+/* Page Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 999;
+}
